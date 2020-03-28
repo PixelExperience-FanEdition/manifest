@@ -48,6 +48,7 @@
   <project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="arrow" />
 
   <!-- External Repos -->
+  <project path="external/motorola/faceunlock" name="external_motorola_faceunlock" remote="pex" />
   <project path="external/tinycompress" name="android_external_tinycompress" remote="pex" />
   <project path="external/selinux" name="android_external_selinux" remote="pex" />
   <project path="external/airbnb-lottie" name="external_airbnb-lottie" remote="pex" revision="ten-plus" />
