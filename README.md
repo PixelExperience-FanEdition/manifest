@@ -6,7 +6,7 @@
 ```bash
 
 # Initialize local repository
-repo init -u https://github.com/PixelExtended/manifest -b ten-plus
+repo init --depth=1 -u git://github.com/PixelExtended/manifest -b ten-plus
 
 # Sync
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
