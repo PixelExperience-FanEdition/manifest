@@ -1,15 +1,27 @@
 # Pixel Extended #
 <img src="https://imgur.com/likQDEZ.png">
 
+### Initialize local repository ###
+
+```bash
+repo init -u https://github.com/PixelExtended/manifest -b r
+```
+ or you can do a shallow clone if you dont't have much bandwidth
+```bash
+repo init -u https://github.com/PixelExtended/manifest -b r --depth=1
+```
+Shallow clone lets you pull down just the latest commits, not the entire repo history. So if your project has years of history, or history from thousands of commits, you can select a particular depth to pull.
+
+So if we are providing argument of `-- depth 1` to the repo init command it will copy only the latest revision of a repo.
+
 ### Sync ###
 
 ```bash
-
-# Initialize local repository
-repo init -u https://github.com/PixelExtended/manifest -b r
-
-# Sync
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+You can just use `repo sync` or above command, but this will save you from lot of terminal spam, data and time.
+```bash
+repo sync -c -q --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
 
 ### Build ###
